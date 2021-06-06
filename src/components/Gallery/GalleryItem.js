@@ -6,7 +6,7 @@ const GalleryItem = ({ img, url, title, description }) => {
     return (
         <Link
             to={url}
-            className="group bg-white shadow-sm rounded-lg overflow-hidden"
+            className="group bg-primary shadow-sm rounded-lg overflow-hidden"
             style={{ transform: 'translateZ(0)' }}
         >
             <GatsbyImage

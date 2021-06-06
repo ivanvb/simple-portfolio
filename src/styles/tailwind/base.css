@@ -11,10 +11,10 @@
     --light_accent: 48, 129, 206;
     --light_secondary_accent: 248, 250, 252;
 
-    --dark_background: 35, 41, 49;
+    --dark_background: 22, 27, 34;
     --dark_text: 238, 238, 238;
     --dark_accent: 80, 204, 162;
-    --dark_secondary_accent: 160, 160, 160;
+    --dark_secondary_accent: 35, 41, 49;
 
     --primary_background: var(--light_background);
     --primary_text: var(--light_text);
@@ -45,6 +45,10 @@ body {
 }
 
 /* End sticky footer/navbar */
+
+body {
+    @apply bg-primary text-primary-contrast;
+}
 
 .container {
     max-width: 1140px !important;

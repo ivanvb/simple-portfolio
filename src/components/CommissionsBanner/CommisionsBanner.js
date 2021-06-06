@@ -15,7 +15,7 @@ const CommisionsBanner = () => {
                 <div className="flex items-center justify-end w-5/12">
                     <Link
                         to="/commisions"
-                        className="bg-white text-primary-accent px-6 py-4 rounded-lg text-lg shadow-md"
+                        className="bg-primary text-primary-accent px-6 py-4 rounded-lg text-lg shadow-md"
                     >
                         Check out my commisions page!
                     </Link>
