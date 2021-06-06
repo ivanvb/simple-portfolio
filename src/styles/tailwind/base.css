@@ -47,7 +47,7 @@ body {
 /* End sticky footer/navbar */
 
 .container {
-    max-width: 1024px !important;
+    max-width: 1140px !important;
 }
 
 @tailwind utilities;

@@ -17,10 +17,12 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'primary-bg': cssVarRgbHelper('primary_background'),
-                'primary-text': cssVarRgbHelper('primary_text'),
-                'primary-accent': cssVarRgbHelper('primary_accent'),
-                'secondary-accent': cssVarRgbHelper('primary_secondary_accent'),
+                primary: {
+                    DEFAULT: cssVarRgbHelper('primary_background'),
+                    contrast: cssVarRgbHelper('primary_text'),
+                    accent: cssVarRgbHelper('primary_accent'),
+                    muted: cssVarRgbHelper('primary_accent'),
+                },
             },
             borderWidth: {
                 '1/2': '0.5px',
