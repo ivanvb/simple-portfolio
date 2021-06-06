@@ -19,7 +19,7 @@ const IndexPage = ({ data: { allFile: images } }) => {
                             gatsbyImageData: img.childImageSharp.gatsbyImageData,
                             alt: '',
                         },
-                        url: '/',
+                        url: `/art/${img.name}`,
                         title: 'The large eye',
                         description: "This is a very large eye, isn't it?",
                     };
@@ -34,6 +34,7 @@ export const query = graphql`
         allFile(filter: { relativePath: { regex: "/artwork/" } }) {
             edges {
                 node {
+                    name
                     childImageSharp {
                         gatsbyImageData(width: 500)
                     }
