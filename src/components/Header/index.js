@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import ThemeToggler from '../ThemeToggler/ThemeToggler';
 
 const links = [
     {
@@ -19,13 +20,16 @@ const Header = () => {
                 <Link className="h-16 w-16" to="/">
                     <div className="h-full w-full bg-gray-500"></div>
                 </Link>
-                <ul className="text-lg flex space-x-3">
-                    {links.map((link, i) => (
-                        <li key={i}>
-                            <Link to={link.url}>{link.title}</Link>
-                        </li>
-                    ))}
-                </ul>
+                <div className="flex space-x-8">
+                    <ThemeToggler />
+                    <ul className="text-lg flex space-x-3">
+                        {links.map((link, i) => (
+                            <li key={i}>
+                                <Link to={link.url}>{link.title}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </nav>
         </header>
     );
