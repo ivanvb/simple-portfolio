@@ -70,6 +70,7 @@ module.exports = {
                 'std-xl-wide': '7.5px',
             },
             lineHeight: {
+                12: '3rem',
                 14: '3.5rem',
                 18: '4.5rem',
                 22: '5.625rem',
