@@ -42,7 +42,7 @@ const SocialLink = ({ url, Icon }) => {
 
 const Footer = () => {
     return (
-        <footer className="container pt-6 pb-4 flex flex-col md:flex-row justify-between items-center">
+        <footer className="container pt-12 pb-8 flex flex-col md:flex-row justify-between items-center">
             <span className="order-2 md:order-1 block text-center md:text-left text-sm">
                 © Copyright 2021 - Present
             </span>

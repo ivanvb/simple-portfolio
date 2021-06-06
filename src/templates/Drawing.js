@@ -13,7 +13,7 @@ const Drawing = ({ data }) => {
 
     return (
         <>
-            <section className="container pt-4 md:pt-8 pb-16">
+            <section className="container pt-4 md:pt-8 pb-4 md:pb-12">
                 <div className="flex flex-col md:flex-row md:space-x-8 lg:space-x-16">
                     <div className="w-full md:w-1/2">
                         <GatsbyImage image={img} alt="" className="w-full shadow" />
