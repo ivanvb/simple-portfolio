@@ -21,7 +21,7 @@ module.exports = {
                     DEFAULT: cssVarRgbHelper('primary_background'),
                     contrast: cssVarRgbHelper('primary_text'),
                     accent: cssVarRgbHelper('primary_accent'),
-                    muted: cssVarRgbHelper('primary_accent'),
+                    muted: cssVarRgbHelper('primary_secondary_accent'),
                 },
             },
             borderWidth: {
@@ -123,7 +123,10 @@ module.exports = {
         },
         container: {
             center: true,
-            padding: '2rem',
+            padding: {
+                DEFAULT: '1rem',
+                sm: '2rem',
+            },
         },
     },
     variants: {
