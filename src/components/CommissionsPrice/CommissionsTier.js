@@ -8,10 +8,12 @@ const CommissionsTier = ({ title, startPrice, description, perks }) => {
             <p className="text-lg mb-4">
                 Starting from <span className="text-primary-accent">{startPrice}$</span>
             </p>
-            <p className="leading-7 mb-6">{description}</p>
+            <p className="leading-7 mb-10">{description}</p>
             <div>
-                <span className="text-primary-accent font-bold block mb-2">What you get:</span>
-                <ul className="text-left list-disc pl-8 space-y-2">
+                <span className="text-primary-accent font-bold block mb-3 text-xl">
+                    What you get:
+                </span>
+                <ul className="text-left list-disc pl-8 space-y-3">
                     {perks.map((perk, i) => (
                         <li key={i}>{perk}</li>
                     ))}
