@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import CommisionsBanner from '../components/CommissionsBanner/CommisionsBanner';
 import PageIntro from '../components/PageIntro/PageIntro';
+import Seo from '../components/Seo';
 
 const Drawing = ({ data }) => {
     const {
@@ -13,6 +14,7 @@ const Drawing = ({ data }) => {
 
     return (
         <>
+            <Seo title="Drawing" />
             <PageIntro
                 img={img}
                 alt=""

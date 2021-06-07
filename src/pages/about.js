@@ -1,11 +1,13 @@
 import React from 'react';
 import PageIntro from '../components/PageIntro/PageIntro';
 import CommisionsBanner from '../components/CommissionsBanner/CommisionsBanner';
+import Seo from '../components/Seo';
 import { graphql } from 'gatsby';
 
 const About = ({ data }) => {
     return (
         <>
+            <Seo title="About" />
             <PageIntro
                 img={data.file.childImageSharp.gatsbyImageData}
                 title="About the Author"
