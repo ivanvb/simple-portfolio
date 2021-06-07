@@ -16,7 +16,7 @@ const links = [
 
 const Header = () => {
     return (
-        <header className="py-4 md:py-8 text-primary-contrast sticky top-0 bg-primary z-50">
+        <header className="py-4 md:py-4 text-primary-contrast sticky top-0 bg-primary z-50">
             <nav className="container flex justify-between items-center">
                 <Link className="h-16 w-28 md:w-40" to="/">
                     <Logo className="h-full w-full" />
