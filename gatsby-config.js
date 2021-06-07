@@ -24,9 +24,9 @@ if (fs.existsSync(baseDataPath)) {
 
 module.exports = {
     siteMetadata: {
-        title: 'Gatsby Simple Boilerplate',
-        description: 'A boilerplate for a simple gatsby site.',
-        author: 'Simple Boilerplate',
+        title: 'Simple Portfolio',
+        description: 'A portfolio for a digital artist.',
+        author: 'Simple Portfolio',
         keywords: ['gatsby', 'portfolio', 'react'],
         siteUrl: siteUrl,
     },
