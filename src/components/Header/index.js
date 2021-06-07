@@ -28,7 +28,8 @@ const Header = () => {
                             <li key={i}>
                                 <Link
                                     to={link.url}
-                                    activeClassName="border-b-2 border-primary-accent pb-1"
+                                    className="pb-1 border-b-2 border-transparent"
+                                    activeClassName="!border-primary-accent"
                                 >
                                     {link.title}
                                 </Link>
