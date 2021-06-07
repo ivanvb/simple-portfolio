@@ -54,4 +54,12 @@ body {
     max-width: 1140px !important;
 }
 
+body button {
+    @apply focus:outline-none focus-visible:ring ring-primary-accent ring-opacity-60;
+}
+
+body a {
+    @apply inline-block focus:outline-none focus-visible:ring ring-primary-accent ring-opacity-60;
+}
+
 @tailwind utilities;
