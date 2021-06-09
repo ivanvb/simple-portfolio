@@ -23,7 +23,7 @@ const Header = () => {
                 </Link>
                 <div className="flex space-x-4 md:space-x-8">
                     <ThemeToggler />
-                    <ul className="text-base md:text-lg flex space-x-3 tracking-wide md:mt-1">
+                    <ul className="text-base md:text-lg flex space-x-3 tracking-wide mt-1">
                         {links.map((link, i) => (
                             <li key={i}>
                                 <Link
