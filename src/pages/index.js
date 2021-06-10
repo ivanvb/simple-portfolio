@@ -4,24 +4,21 @@ import Hero from '../components/Hero/Hero';
 import Gallery from '../components/Gallery/Gallery';
 import { graphql } from 'gatsby';
 
-const IndexPage = ({ data: { allFile: images } }) => {
+const IndexPage = ({ data: { datoCmsHomePage: homeData } }) => {
     return (
         <>
             <Seo title="Home" />
-            <Hero
-                topText="Hello, I'm Johnny"
-                bottomText="I'm a Graphics Designer based in Amsterdam 🇳🇱"
-            />
+            <Hero topText={homeData.herotitle} bottomText={homeData.herosubtitle} />
             <Gallery
-                items={images.edges.map(({ node: img }) => {
+                items={homeData.drawings.map((item) => {
                     return {
                         img: {
-                            gatsbyImageData: img.childImageSharp.gatsbyImageData,
-                            alt: '',
+                            gatsbyImageData: item.image.gatsbyImageData,
+                            alt: item.image.alt,
                         },
-                        url: `/art/${img.name}`,
-                        title: 'The large eye',
-                        description: "This is a very large eye, isn't it?",
+                        url: `/art/${item.url}`,
+                        title: item.title,
+                        description: item.shortDescription,
                     };
                 })}
             />
@@ -31,13 +28,16 @@ const IndexPage = ({ data: { allFile: images } }) => {
 
 export const query = graphql`
     query {
-        allFile(filter: { relativePath: { regex: "/artwork/" } }) {
-            edges {
-                node {
-                    name
-                    childImageSharp {
-                        gatsbyImageData(width: 500)
-                    }
+        datoCmsHomePage {
+            herotitle
+            herosubtitle
+            drawings {
+                title
+                shortDescription
+                url
+                image {
+                    gatsbyImageData(width: 500)
+                    alt
                 }
             }
         }

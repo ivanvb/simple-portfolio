@@ -6,24 +6,18 @@ import Seo from '../components/Seo';
 
 const Drawing = ({ data }) => {
     const {
-        file: {
-            name,
-            childImageSharp: { gatsbyImageData: img },
-        },
+        datoCmsDrawing: { title, shortDescription, description, image },
     } = data;
 
     return (
         <>
             <Seo title="Drawing" />
             <PageIntro
-                img={img}
-                alt=""
-                title="A very Interesting Artwork"
-                subtitle="An ode to Modern Art"
-                paragraphs={[
-                    'Lorem id ex ipsum id occaecat sit nisi Lorem sit occaecat veniam occaecat. Sit quis aliqua aliqua esse aliqua cupidatat reprehenderit dolore mollit anim consequat aute. Velit nostrud ea commodo commodo Lorem esse aute duis. Non esse laborum cupidatat aliquip excepteur pariatur enim dolore aliqua. Duis nulla fugiat magna incididunt ipsum eiusmod occaecat enim occaecat nisi minim aliqua ipsum magna. In aliqua cupidatat aliquip dolor consequat Lorem non aliqua non labore laborum.',
-                    'Velit ipsum id cupidatat in ipsum nostrud aute ullamco aliquip tempor excepteur aute in amet.',
-                ]}
+                img={image.gatsbyImageData}
+                alt={image.alt}
+                title={title}
+                subtitle={shortDescription}
+                paragraphs={description.split('\n\n')}
             />
             <CommisionsBanner />
         </>
@@ -32,10 +26,13 @@ const Drawing = ({ data }) => {
 
 export const query = graphql`
     query ($title: String!) {
-        file(name: { eq: $title }) {
-            name
-            childImageSharp {
+        datoCmsDrawing(title: { eq: $title }) {
+            title
+            shortDescription
+            description
+            image {
                 gatsbyImageData(width: 1140)
+                alt
             }
         }
     }

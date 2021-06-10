@@ -3,13 +3,14 @@ const path = require('path');
 async function createDrawingsPages(graphql, actions) {
     const template = path.resolve('./src/templates/Drawing.js');
     const {
-        data: { allFile: drawings },
+        data: { allDatoCmsDrawing: drawings },
     } = await graphql(`
         {
-            allFile(filter: { relativePath: { regex: "/artwork/" } }) {
+            allDatoCmsDrawing {
                 edges {
                     node {
-                        name
+                        title
+                        url
                     }
                 }
             }
@@ -18,9 +19,9 @@ async function createDrawingsPages(graphql, actions) {
 
     drawings.edges.forEach(({ node }) => {
         actions.createPage({
-            path: `/art/${node.name}`,
+            path: `/art/${node.url}`,
             context: {
-                title: node.name,
+                title: node.title,
             },
             component: template,
         });
