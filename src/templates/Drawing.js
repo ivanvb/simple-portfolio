@@ -11,7 +11,7 @@ const Drawing = ({ data }) => {
 
     return (
         <>
-            <Seo title="Drawing" />
+            <Seo title={title} image={{ src: image.url }} />
             <PageIntro
                 img={image.gatsbyImageData}
                 alt={image.alt}
@@ -33,6 +33,7 @@ export const query = graphql`
             image {
                 gatsbyImageData(width: 1140)
                 alt
+                url
             }
         }
     }
