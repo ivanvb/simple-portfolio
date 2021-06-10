@@ -1,10 +1,9 @@
 const fs = require('fs');
 
-process.env.NODE_ENV !== 'production' ||
-    (process.env.DEPLOYED !== 'true' &&
-        require('dotenv').config({
-            path: `.env.${process.env.NODE_ENV}`,
-        }));
+(process.env.NODE_ENV !== 'production' || process.env.DEPLOYED !== 'true') &&
+    require('dotenv').config({
+        path: `.env.development`,
+    });
 
 const siteUrl = process.env.GATSBY_URL || 'https://example.com';
 
@@ -92,6 +91,12 @@ module.exports = {
             options: {
                 siteUrl: siteUrl,
                 noTrailingSlash: true,
+            },
+        },
+        {
+            resolve: 'gatsby-source-datocms',
+            options: {
+                apiToken: process.env.GATSBY_DATO_TOKEN,
             },
         },
     ],

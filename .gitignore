@@ -3,4 +3,5 @@ node_modules/
 public
 **/styles/tailwind/build.css
 
-**/.env.**
+**/.env.development
+**/.env.production
