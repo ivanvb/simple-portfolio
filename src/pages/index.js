@@ -15,6 +15,8 @@ const IndexPage = ({ data: { datoCmsHomePage: homeData } }) => {
                         img: {
                             gatsbyImageData: item.image.gatsbyImageData,
                             alt: item.image.alt,
+                            x: item.image.focalPoint.x,
+                            y: item.image.focalPoint.y,
                         },
                         url: `/art/${item.url}`,
                         title: item.title,
@@ -38,6 +40,10 @@ export const query = graphql`
                 image {
                     gatsbyImageData(width: 500)
                     alt
+                    focalPoint {
+                        x
+                        y
+                    }
                 }
             }
         }

@@ -12,6 +12,7 @@ const GalleryItem = ({ img, url, title, description }) => {
             <GatsbyImage
                 image={img.gatsbyImageData}
                 alt={img.alt}
+                objectPosition={`${img.x * 100}% ${img.y * 100}%`}
                 className="h-64 md:h-80 lg:h-64 xl:h-80 transition-opacity duration-[150ms] group-hover:opacity-50"
             />
             <div className="p-4">
