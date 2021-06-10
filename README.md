@@ -9,3 +9,5 @@ Includes:
 - An about page
 - A commissions page that allows different price tiers
 - A contact form
+
+You can check the live site [here](r-simple-portfolio.netlify.app)
