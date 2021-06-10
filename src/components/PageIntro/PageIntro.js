@@ -22,7 +22,7 @@ const PageIntro = ({ img, alt = '', title, subtitle, paragraphs, reverse = false
                 >
                     <h1 className="text-2xl md:text-3xl font-extrabold">{title}</h1>
                     <h2 className="text-2xl text-primary-accent font-semibold">{subtitle}</h2>
-                    <div className="flex flex-col space-y-4 py-2 md:py-4 opacity-70">
+                    <div className="flex flex-col space-y-4 py-2 md:py-4 text-primary-light-contrast">
                         {paragraphs.map((p, i) => (
                             <p key={i}>{p}</p>
                         ))}

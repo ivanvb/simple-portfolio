@@ -10,16 +10,19 @@
     --light_text: 0, 0, 0;
     --light_accent: 48, 129, 206;
     --light_secondary_accent: 248, 250, 252;
+    --light_text_light: 77, 77, 77;
 
     --dark_background: 22, 27, 34;
     --dark_text: 238, 238, 238;
     --dark_accent: 80, 204, 162;
     --dark_secondary_accent: 35, 41, 49;
+    --dark_text_light: 173, 174, 176;
 
     --primary_background: var(--light_background);
     --primary_text: var(--light_text);
     --primary_accent: var(--light_accent);
     --primary_secondary_accent: var(--light_secondary_accent);
+    --primary_text_light: var(--light_text_light);
 }
 
 /* Sticky footer/navbar Gatsby specific styles */

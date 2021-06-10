@@ -22,6 +22,7 @@ module.exports = {
                     contrast: cssVarRgbHelper('primary_text'),
                     accent: cssVarRgbHelper('primary_accent'),
                     muted: cssVarRgbHelper('primary_secondary_accent'),
+                    'light-contrast': cssVarRgbHelper('primary_text_light'),
                 },
             },
             borderWidth: {
