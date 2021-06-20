@@ -99,5 +99,11 @@ module.exports = {
                 apiToken: process.env.GATSBY_DATO_TOKEN,
             },
         },
+        {
+            resolve: 'gatsby-plugin-manifest',
+            options: {
+                icon: './src/images/icon.png',
+            },
+        },
     ],
 };
