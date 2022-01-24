@@ -10,4 +10,4 @@ Includes:
 - A commissions page that allows different price tiers
 - A contact form
 
-You can check the live site [here](r-simple-portfolio.netlify.app)
+You can check the live site [here](https://r-simple-portfolio.netlify.app/)
